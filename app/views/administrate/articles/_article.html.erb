@@ -1,12 +1,15 @@
-<div id="<%= dom_id article %>">
-  <p>
-    <strong>Title:</strong>
-    <%= article.title %>
-  </p>
-
-  <p>
-    <strong>Body:</strong>
-    <%= article.body %>
-  </p>
-
-</div>
+<tr>
+  <td><%= I18n.l(article.created_at, format: :short) %></td>
+  <td>Frontend</td>
+  <td><%= article.title %></td>
+  <td>
+    <div class="icons">
+      <a href="#" title="Editar"><%= image_tag("icons/gray/edit.svg") %></a>
+      <%= link_to [:administrate, article], title:"Visualizar" do %>
+      <%= image_tag("icons/gray/eye.svg") %>
+      <% end %>
+      
+      <a href="#" title="Deletar"><%= image_tag("icons/gray/close.svg") %></a>
+    </div>
+  </td>
+</tr>

@@ -1,0 +1,171 @@
+<%= form_with(model: [:administrate, acompanhante]) do |form| %>
+
+  <% if acompanhante.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(acompanhante.errors.count, "error") %> prohibited this acompanhante from being saved:</h2>
+
+      <ul>
+        <% acompanhante.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+   <div>
+    <%= form.label :img_destaque_1, style: "display: block" %>
+    <%= form.file_field :img_destaque_1 %>
+    <div id="id_img_destaque_1">
+      <%= image_tag acompanhante.img_destaque_1.variant(:thumb) if acompanhante.img_destaque_1.attached? %>
+
+      <%= link_to "Remover",
+            destroy_img_destaque_1_administrate_acompanhante_path(acompanhante),
+            data: { "turbo-confirm": "Tem certeza?", "turbo-method": :delete } if acompanhante.img_destaque_1.attached? %>
+    </div>
+  </div>
+
+     <div>
+    <%= form.label :img_destaque_2, style: "display: block" %>
+    <%= form.file_field :img_destaque_2 %>
+    <div id="id_img_destaque_2">
+      <%= image_tag acompanhante.img_destaque_2.variant(:thumb) if acompanhante.img_destaque_2.attached? %>
+
+      <%= link_to "Remover",
+            destroy_img_destaque_2_administrate_acompanhante_path(acompanhante),
+            data: { "turbo-confirm": "Tem certeza?", "turbo-method": :delete } if acompanhante.img_destaque_2.attached? %>
+    </div>
+  </div>
+
+     <div>
+    <%= form.label :img_destaque_3, style: "display: block" %>
+    <%= form.file_field :img_destaque_3 %>
+    <div id="id_img_destaque_3">
+      <%= image_tag acompanhante.img_destaque_3.variant(:thumb) if acompanhante.img_destaque_3.attached? %>
+
+      <%= link_to "Remover",
+            destroy_img_destaque_3_administrate_acompanhante_path(acompanhante),
+            data: { "turbo-confirm": "Tem certeza?", "turbo-method": :delete } if acompanhante.img_destaque_3.attached? %>
+    </div>
+  </div>
+
+     <div>
+    <%= form.label :img_destaque_4, style: "display: block" %>
+    <%= form.file_field :img_destaque_4 %>
+    <div id="id_img_destaque_4">
+      <%= image_tag acompanhante.img_destaque_4.variant(:thumb) if acompanhante.img_destaque_4.attached? %>
+
+      <%= link_to "Remover",
+            destroy_img_destaque_4_administrate_acompanhante_path(acompanhante),
+            data: { "turbo-confirm": "Tem certeza?", "turbo-method": :delete } if acompanhante.img_destaque_4.attached? %>
+    </div>
+  </div>
+
+     <div>
+    <%= form.label :img_destaque_5, style: "display: block" %>
+    <%= form.file_field :img_destaque_5 %>
+    <div id="id_img_destaque_5">
+      <%= image_tag acompanhante.img_destaque_5.variant(:thumb) if acompanhante.img_destaque_5.attached? %>
+
+      <%= link_to "Remover",
+            destroy_img_destaque_5_administrate_acompanhante_path(acompanhante),
+            data: { "turbo-confirm": "Tem certeza?", "turbo-method": :delete } if acompanhante.img_destaque_5.attached? %>
+    </div>
+  </div>
+
+     <div>
+    <%= form.label :img_destaque_6, style: "display: block" %>
+    <%= form.file_field :img_destaque_6 %>
+    <div id="id_img_destaque_6">
+      <%= image_tag acompanhante.img_destaque_6.variant(:thumb) if acompanhante.img_destaque_6.attached? %>
+
+      <%= link_to "Remover",
+            destroy_img_destaque_6_administrate_acompanhante_path(acompanhante),
+            data: { "turbo-confirm": "Tem certeza?", "turbo-method": :delete } if acompanhante.img_destaque_6.attached? %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :idade, style: "display: block" %>
+    <%= form.number_field :idade %>
+  </div>
+
+  <div>
+    <%= form.label :altura, style: "display: block" %>
+    <%= form.text_field :altura %>
+  </div>
+
+  <div>
+    <%= form.label :peso, style: "display: block" %>
+    <%= form.text_field :peso %>
+  </div>
+
+  <div>
+    <%= form.label :manequin, style: "display: block" %>
+    <%= form.number_field :manequin %>
+  </div>
+
+  <div>
+    <%= form.label :pes, style: "display: block" %>
+    <%= form.number_field :pes %>
+  </div>
+
+  <div>
+    <%= form.label :cabelos, style: "display: block" %>
+    <%= form.text_field :cabelos %>
+  </div>
+
+  <div>
+    <%= form.label :olhos, style: "display: block" %>
+    <%= form.text_field :olhos %>
+  </div>
+
+  <div>
+    <%= form.label :tipo, style: "display: block" %>
+    <%= form.text_field :tipo %>
+  </div>
+
+  <div>
+    <%= form.label :biotipo, style: "display: block" %>
+    <%= form.text_field :biotipo %>
+  </div>
+
+  <div>
+    <%= form.label :cpf, style: "display: block" %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div>
+    <%= form.label :pais, style: "display: block" %>
+    <%= form.text_field :pais %>
+  </div>
+
+  <div>
+    <%= form.label :estado, style: "display: block" %>
+    <%= form.text_field :estado %>
+  </div>
+
+  <div>
+    <%= form.label :cidade, style: "display: block" %>
+    <%= form.text_field :cidade %>
+  </div>
+
+  <div>
+    <%= form.label :bairro, style: "display: block" %>
+    <%= form.text_field :bairro %>
+  </div>
+
+  <div>
+    <%= form.label :logradouro, style: "display: block" %>
+    <%= form.text_field :logradouro %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

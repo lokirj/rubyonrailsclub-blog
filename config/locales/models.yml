@@ -1,0 +1,13 @@
+pt-BR:
+  activerecord:
+    models:
+      admin: Administrador
+      article: Artigo
+    attributes:
+      admin:
+        email: "MEU EMAIL"
+      article:
+        title: "título"
+        body: "corpo"
+        cover_image: "Imagem de destaque"
+      # will translate User attribute "login" as "Handle"

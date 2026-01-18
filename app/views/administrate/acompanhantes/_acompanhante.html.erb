@@ -1,0 +1,92 @@
+<div id="<%= dom_id acompanhante %>">
+  <p>
+    <strong>Cover:</strong>
+    <%= image_tag acompanhante.img_destaque_1.variant(:thumb) if acompanhante.img_destaque_1.attached? %>
+    <%= image_tag acompanhante.img_destaque_2.variant(:thumb) if acompanhante.img_destaque_2.attached? %>
+    <%= image_tag acompanhante.img_destaque_3.variant(:thumb) if acompanhante.img_destaque_3.attached? %>
+    <%= image_tag acompanhante.img_destaque_4.variant(:thumb) if acompanhante.img_destaque_4.attached? %>
+    <%= image_tag acompanhante.img_destaque_5.variant(:thumb) if acompanhante.img_destaque_5.attached? %>
+    <%= image_tag acompanhante.img_destaque_6.variant(:thumb) if acompanhante.img_destaque_6.attached? %>
+  </p>
+  
+  <p>
+    <strong>Nome:</strong>
+    <%= acompanhante.nome %>
+  </p>
+
+  <p>
+    <strong>Idade:</strong>
+    <%= acompanhante.idade %>
+  </p>
+
+  <p>
+    <strong>Altura:</strong>
+    <%= acompanhante.altura %>
+  </p>
+
+  <p>
+    <strong>Peso:</strong>
+    <%= acompanhante.peso %>
+  </p>
+
+  <p>
+    <strong>Manequin:</strong>
+    <%= acompanhante.manequin %>
+  </p>
+
+  <p>
+    <strong>Pes:</strong>
+    <%= acompanhante.pes %>
+  </p>
+
+  <p>
+    <strong>Cabelos:</strong>
+    <%= acompanhante.cabelos %>
+  </p>
+
+  <p>
+    <strong>Olhos:</strong>
+    <%= acompanhante.olhos %>
+  </p>
+
+  <p>
+    <strong>Tipo:</strong>
+    <%= acompanhante.tipo %>
+  </p>
+
+  <p>
+    <strong>Biotipo:</strong>
+    <%= acompanhante.biotipo %>
+  </p>
+
+  <p>
+    <strong>Cpf:</strong>
+    <%= acompanhante.cpf %>
+  </p>
+
+  <p>
+    <strong>Pais:</strong>
+    <%= acompanhante.pais %>
+  </p>
+
+  <p>
+    <strong>Estado:</strong>
+    <%= acompanhante.estado %>
+  </p>
+
+  <p>
+    <strong>Cidade:</strong>
+    <%= acompanhante.cidade %>
+  </p>
+
+  <p>
+    <strong>Bairro:</strong>
+    <%= acompanhante.bairro %>
+  </p>
+
+  <p>
+    <strong>Logradouro:</strong>
+    <%= acompanhante.logradouro %>
+  </p>
+
+</div>

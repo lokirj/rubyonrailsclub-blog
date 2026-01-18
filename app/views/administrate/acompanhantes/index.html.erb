@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Acompanhantes</h1>
+
+<div id="acompanhantes">
+  <% @acompanhantes.each do |acompanhante| %>
+    <%= render acompanhante %>
+    <p>
+      <%= link_to "Show this acompanhante", [:administrate, acompanhante] %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New acompanhante",  new_administrate_acompanhante_path  %>
