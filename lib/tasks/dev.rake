@@ -11,7 +11,7 @@ namespace :dev do
     system("rails dev:add_acompanhantes")
   end
 
-    task add_articles: :environment do
+  task add_articles: :environment do
     show_spinner("Adding Articles...") { add_articles }
   end
 
@@ -27,7 +27,7 @@ namespace :dev do
 
       image_id = rand(1..7)
       article.cover_image.attach(
-        io: File.open("#{Rails.root}/lib/tasks/images/article_#{image_id}.jpg"), filename: "article_#{image_id}.jpg"
+        io: File.open(Rails.root.join("lib/tasks/images/article_#{image_id}.jpg").to_s), filename: "article_#{image_id}.jpg",
       )
     end
   end
@@ -72,12 +72,10 @@ namespace :dev do
 
       image_id = rand(1..8)
       acompanhante.img_destaque_1.attach(
-        io: File.open("#{Rails.root}/lib/tasks/images/acompanhante_#{image_id}.jpg"), filename: "acompanhante_#{image_id}.jpg"
+        io: File.open(Rails.root.join("lib/tasks/images/acompanhante_#{image_id}.jpg").to_s), filename: "acompanhante_#{image_id}.jpg",
       )
     end
   end
-
-
 
   def show_spinner(msg_start, msg_end = "Done!")
     spinner = TTY::Spinner.new("[:spinner] #{msg_start}")

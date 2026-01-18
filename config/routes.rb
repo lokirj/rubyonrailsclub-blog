@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'dashboards/index'
+  get "dashboards/index"
   devise_for :users
   devise_for :admins
   root "welcome#index"

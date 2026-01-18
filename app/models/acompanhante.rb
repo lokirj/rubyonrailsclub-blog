@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Acompanhante < ApplicationRecord
-  
   has_one_attached :img_destaque_1 do |attachable|
     attachable.variant(:thumb, resize_to_limit: [100, 100])
     attachable.variant(:cover, resize_to_limit: [200, 200])
